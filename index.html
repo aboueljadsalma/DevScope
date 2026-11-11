@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
 </head>
 <body class="bg-gray-950 ">
     <header class="bg-gray-900 p-6 border-b-2 text-white flex justify-between" >
@@ -14,17 +19,32 @@
             <p class="font-bold text-xl flex justify-center p-2 ">DevScope</p>
         </div>
 
-        <div class="bg-transparent ">
+        <nav class="flex gap-2 ">
             <button class="p-2 ">Recherche</button>
             <button class="p-2 " >Shortlist</button>
-        </div>
+        </nav>
     </header>
 
-    <main class="absolute top-[50%] translate-y-[-50%] w-[35%] translate-x-[-50%] left-[50%] text-center">
-        <h1 class="text-white font-medium text-5xl ">Trouvez les meillieurs  développeurs grâce à leur code</h1>
-        <p class="text-white">Analysez un Profil, ses projets et ses languages en quelques secondes</p>
-    </main>
+    <main class="absolute top-[50%] translate-y-[-50%] w-[50%] translate-x-[-50%] left-[50%] text-center">
+        <div>
+            <h1 class="text-4xl font-semibold leading-tight sm:text-5xl text-white">Trouvez les meilleurs développeurs grâce à <span class=" text-cyan-500 ">leur code</span></h1>
+        </div> 
+        <div>
+            <p class="text-white p-6">Analysez un Profil, ses projets et ses languages en quelques secondes</p>
+        </div>
+        <div class="flex items-center gap-3">
+  <div class="relative flex-1">
+    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2  text-cyan-400 "></i>
+    <input type="text"
+      class="w-full pl-11 pr-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+      placeholder="Entrez un nom d'utilisateur..." />
+  </div>
 
-    
+  <button class="flex items-center gap-2 px-5 py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-pink-500 text-white font-medium hover:opacity-90 transition">
+    Analysez
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+</div>      
+        </main>
 </body>
 </html> 
