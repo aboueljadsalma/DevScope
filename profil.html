@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body class="bg-gray-950 text-white">
+    <header class="bg-gray-900 p-6 border-b-2 text-white flex justify-between " >
+        <div>
+            <p class="font-bold text-xl flex justify-center p-2 ">DevScope</p>
+        </div>
+
+        <nav class="flex gap-2 ">
+            <ul class="flex items-center gap-3">
+                <li><a href="index.html">Recherche</a> </li>
+                <li><a href="shortlist.html">Shortlist</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="flex gap-2  px-9 py-7">
+    <div class="relative flex-1">
+    <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2  text-pink-300 "></i>
+    <input type="text"
+      class="w-full pl-11 pr-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-gray-200"
+      placeholder="Entrez un nom d'utilisateur..." />
+  </div>
+
+  <button class="flex items-center gap-2 px-5 py-3 rounded-lg bg-gradient-to-r from-pink-300 text-white font-medium hover:opacity-90 transition">
+    Recherche
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+</section>
+
+<section class="p-5 flex gap-1 px-9 mx-1 gap-x-6">
+    <div class="flex flex-col items-center gap-3 w-1/4 bg-gray-900 rounded-lg backdrop-blur-sm py-5">
+        <img src="assets/afd5eaa2-9a33-497f-a936-4848aa6e1e6e (1).png" alt="Profil" class="w-[25%] rounded-full ">
+        <h2 class="font-bold text-2xl">Salma aboueljad</h2>
+        <p class="text-pink-200 ">@salma-aboueljad</p>
+        <p class="text-gray-400">Développeuse Full Stack</p>
+
+        <div class="flex flex-col items-center border border-gray-700 p-2 rounded-md">
+            <p class="bg-gradient-to-r from-pink-300 to-purple-600 bg-clip-text text-transparent ">Morocco</p>
+            <p>Membre depuis septembre 2026</p>
+        </div>
+
+        <div class="flex items-center ">
+            <div class="flex flex-col items-center border border-gray-700  p-2 rounded-lg">
+                <h3 class="text-pink-300">64</h3>
+                <p>DÉPÔTS</p>
+            </div>
+            <div class="flex flex-col items-center  border border-gray-700  p-2 rounded-lg gap-2">
+                <h3 class="text-purple-300 ">95</h3>
+                <p>ABONNES</p>
+            </div>
+            <div class="flex flex-col items-center border border-gray-700  p-2 rounded-lg">
+                <h3 class="text-purple-500">18</h3>
+                <p>ABONNEMENTS</p>
+            </div>
+        </div>
+
+        <button class="bg-gradient-to-r to-purple-500 from-pink-300 px-10 py-2 rounded-lg ">Ajouter a la shortlist</button>
+        <button class="bg-transparent border border-gray-700 px-2 py-5 rounded-lg">Voir le profil original</button>
+    </div>
+
+    <div class="w-3/4 bg-gray-900 rounded-lg p-3 flex flex-col gap-3">
+        <h2 class="font-['Bodoni_Moda'] italic font-bold text-2xl p-4 ">Dépôts <span>15</span></h2>
+        <div class="grid grid-cols-3 gap-5">
+        <article class="border border-gray-700  p-4 rounded-lg ">
+            <h3 class="text-yellow-100">
+                <i class="fa-regular fa-square text-[12px] text-white"></i>
+                ARGANIK
+            </h3>
+            <p class="text-gray-400">Aucune description</p>
+            <div class="flex gap-4">
+                <p>
+                    <i class="fa-solid fa-circle text-[7px]"></i>
+                    HTML
+                </p>
+                <p class="text-yellow-300">
+                    <i class="fa-sharp fa-solid fa-star text-[9px]"></i>
+                    0
+                </p>
+            </div>
+
+            <p class="text-gray-300">
+                Mise à jour il y a 15 jours
+            </p>
+
+        </article>
+
+
+         <article class="border border-gray-700 rounded-lg  p-4 ">
+            <h3 class="text-yellow-100">
+                <i class="fa-regular fa-square text-[12px] text-white"></i>
+                TACHKILA
+            </h3>
+            <p class="text-gray-400">Aucune description</p>
+            <div class="flex gap-4">
+                <p>
+                    <i class="fa-solid fa-circle text-[7px]"></i>
+                    HTML
+                </p>
+                <p class="text-yellow-300">
+                    <i class="fa-sharp fa-solid fa-star text-[9px]"></i>
+                    0
+                </p>
+            </div>
+
+            <p class="text-gray-300">
+                Mise à jour il y a 7 jours
+            </p>
+
+        </article>
+        </div>
+    </div>
+</section>
+    </main>
+
+</body>
+</html>
