@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevScope</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="searchHtml.js" type="module" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -37,12 +37,13 @@
         <div class="flex items-center gap-3">
   <div class="relative flex-1">
     <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2  text-cyan-400 "></i>
-    <input type="text"
+    <input type="search"
+    id="search"
       class="w-full pl-11 pr-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500"
       placeholder="Entrez un nom d'utilisateur..." />
   </div>
 
-  <button class="flex items-center gap-2 px-5 py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-pink-500 text-white ">
+  <button id="submit" class="flex items-center gap-2 px-5 py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-pink-500 text-white ">
     Analysez
     <i class="fa-solid fa-arrow-right"></i>
   </button>
