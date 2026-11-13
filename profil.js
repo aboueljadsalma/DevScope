@@ -1,20 +1,22 @@
 const promas = new URLSearchParams(window.location.search);
 const username = promas.get("user");
 
-export async function ShowUser(parent) {
+export async function ShowUser(parent, parent2, count) {
     const res = await fetch(`https://api.github.com/users/${username}`);
-    if (!res.ok) {
-        throw new error("user introvable");;
+    const res1 = await fetch(`https://api.github.com/users/${username}/repos`)
+    if (!res.ok || !res1.ok) {
+        throw new error("user introvable");
         
     }
-    const user = await res.json()
+    const user = await res.json();
+    const repo = await res1.json();
+    console.log(repo)
     console.log(user)
     console.log(username)
 
     parent.innerHTML = "";
 
     const html = `
-       <div class="flex flex-col items-center gap-3 w-1/4 bg-gray-900 rounded-lg backdrop-blur-sm py-5">
         <img src=${user.avatar_url} alt="Profil" class="w-[25%] rounded-full ">
         <h2 class="font-bold text-2xl">${user.name}</h2>
         <p class="text-pink-200 ">@${user.login}</p>
@@ -42,9 +44,42 @@ export async function ShowUser(parent) {
 
         <button class="bg-gradient-to-r to-purple-500 from-pink-300 px-10 py-2 rounded-lg ">Ajouter a la shortlist</button>
         <a href=${user.html_url}><button class="bg-transparent border border-gray-700 px-2 py-5 rounded-lg">Voir le profil original</button></a>
-    </div>
 
     `
 
     parent.innerHTML = html;
+    count.textContent = user.public_repos
+
+
+    repo.forEach(rep => {
+        console.log(rep.name)
+
+
+        const html = `
+           <article  class="border border-gray-700  p-4 rounded-lg ">
+            <h3 class="text-yellow-100">
+                <i class="fa-regular fa-square text-[12px] text-white"></i>
+                ${rep.name}
+            </h3>
+            <p class="text-gray-400">${user.bio}</p>
+            <div class="flex gap-4">
+                <p>
+                    <i class="fa-solid fa-circle text-[7px]"></i>
+                    ${user.language}
+                </p>
+                <p class="text-yellow-300">
+                    <i class="fa-sharp fa-solid fa-star text-[9px]"></i>
+                    0
+                </p>
+            </div>
+
+            <p class="text-gray-300">
+                Mise à jour il y a ${} jours
+            </p>
+
+        </article>
+        `
+
+        parent2.insertAdjacentHTML("beforeend", html);
+    })
 }

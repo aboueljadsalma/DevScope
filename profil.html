@@ -42,8 +42,8 @@
   </button>
 </section>
 
-<section id="parent" class="p-5 flex gap-1 px-9 mx-1 gap-x-6">
-    <div class="flex flex-col items-center gap-3 w-1/4 bg-gray-900 rounded-lg backdrop-blur-sm py-5">
+<section class="p-5 flex gap-1 px-9 mx-1 gap-x-6">
+    <div id="parent" class="flex flex-col items-center gap-3 w-1/4 bg-gray-900 rounded-lg backdrop-blur-sm py-5">
         <img src="assets/afd5eaa2-9a33-497f-a936-4848aa6e1e6e (1).png" alt="Profil" class="w-[25%] rounded-full ">
         <h2 class="font-bold text-2xl">Salma aboueljad</h2>
         <p class="text-pink-200 ">@salma-aboueljad</p>
@@ -73,55 +73,9 @@
         <button class="bg-transparent border border-gray-700 px-2 py-5 rounded-lg">Voir le profil original</button>
     </div>
 
-    <div class="w-3/4 bg-gray-900 rounded-lg p-3 flex flex-col gap-3">
-        <h2 class="font-['Bodoni_Moda'] italic font-bold text-2xl p-4 ">Dépôts <span>15</span></h2>
-        <div class="grid grid-cols-3 gap-5">
-        <article class="border border-gray-700  p-4 rounded-lg ">
-            <h3 class="text-yellow-100">
-                <i class="fa-regular fa-square text-[12px] text-white"></i>
-                ARGANIK
-            </h3>
-            <p class="text-gray-400">Aucune description</p>
-            <div class="flex gap-4">
-                <p>
-                    <i class="fa-solid fa-circle text-[7px]"></i>
-                    HTML
-                </p>
-                <p class="text-yellow-300">
-                    <i class="fa-sharp fa-solid fa-star text-[9px]"></i>
-                    0
-                </p>
-            </div>
-
-            <p class="text-gray-300">
-                Mise à jour il y a 15 jours
-            </p>
-
-        </article>
-
-
-         <article class="border border-gray-700 rounded-lg  p-4 ">
-            <h3 class="text-yellow-100">
-                <i class="fa-regular fa-square text-[12px] text-white"></i>
-                TACHKILA
-            </h3>
-            <p class="text-gray-400">Aucune description</p>
-            <div class="flex gap-4">
-                <p>
-                    <i class="fa-solid fa-circle text-[7px]"></i>
-                    HTML
-                </p>
-                <p class="text-yellow-300">
-                    <i class="fa-sharp fa-solid fa-star text-[9px]"></i>
-                    0
-                </p>
-            </div>
-
-            <p class="text-gray-300">
-                Mise à jour il y a 7 jours
-            </p>
-
-        </article>
+    <div  class="w-3/4 bg-gray-900 rounded-lg p-3 flex flex-col gap-3">
+        <h2 class="font-['Bodoni_Moda'] italic font-bold text-2xl p-4 ">Dépôts <span class="count"></span></h2>
+        <div class="grid grid-cols-3 gap-5" id="parent2">
         </div>
     </div>
 </section>

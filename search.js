@@ -26,7 +26,3 @@ export function Submit(search, submit) {
     })
     
 }
-
-
-
-
