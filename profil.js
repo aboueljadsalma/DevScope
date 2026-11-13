@@ -74,7 +74,7 @@ export async function ShowUser(parent, parent2, count) {
             </div>
 
             <p class="text-gray-300">
-                Mise à jour il y a ${} jours
+                Mise à jour il y a jours
             </p>
 
         </article>
